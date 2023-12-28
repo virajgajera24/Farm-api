@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h5><%= username%></h1>
+<h5><%= userid%></h1>
+    <br><a href="user_buylist">you buylist</a>
+<table>
+    <% result.forEach(function(user){ %>
+    <tr>
+        <td ><img src="<%= user.image%>" width="300" alt=""></td>
+        <td><%= user.name%></td>
+        <td>price <%= user.price%></td>
+        <td ><button><a  href="/buy/<%= user.id%>">buy</a></button></td>
+    </tr>
+    <% }); %>
+</table>
+</body>
+</html>
